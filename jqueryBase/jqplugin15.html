@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        .box{
+            padding: 5px;
+        }
+        #dock{
+            position: fixed;
+            min-height: 120px;
+            width: 100%;
+            bottom: 0px;
+            z-index: 1;
+        }
+        #dock > div{
+            float: right;
+        }
+    </style>
+    <script>
+        $(function(){
+            let words = ['able', 'apple', 'application', 'bear', 'bit', 'byte', 'car', 'cable'];
+            $('#english').autocomplete({
+                source : words
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <label for="english">단어</label>
+        <input type="text" id = "english">
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        .box{
+            padding: 5px;
+        }
+        #dock{
+            position: fixed;
+            min-height: 120px;
+            width: 100%;
+            bottom: 0px;
+            z-index: 1;
+        }
+        #dock > div{
+            float: right;
+        }
+    </style>
+    <script>
+        $(function(){
+            for(let i = 0; i < 21; i++){
+                let icon ='';
+                icon += '<div class = "ui-widget-content ui-corner-all item">';
+                icon += '<img src = "../images'+ i + '.png">';
+                icon += '</div>';
+                $('#wrap').append(icon);
+            }
+            $('#wrap>div').draggable({
+                scroll : false,
+                zIndex : 100,
+                helper : 'clone',
+                revert : 'invalid'
+            });
+            $('#dock').droppable({
+                accept : '#wrap>div',
+                drop : function(event, ui){
+                    $(ui, draggable).fadeOut('fast')
+                }
+
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <script>
+        $(function(){
+            let oldImage = ['box1.png', 'lightbulb1.png', '우는사람.png'];
+            let newImage = ['box2.png', 'lightbulb.png', '웃는사람.png']
+            let index;
+            $('img').hover(function(){
+                index = $(this).index();
+                $(this).attr('src', '../images/ + newImage[index]');
+            }, function(){
+                $(this).attr('src', '../images + oldImage[index]')
+            })
+        });
+    </script>
+    <title>자바스크립트 라이브러리</title>
+</head>
+<body>
+    <h1>제이쿼리 메소드</h1>
+    <img src="../images/box1.png" alt="박스">
+    <img src="../images/lightbulb1.png" alt="전등">
+    <img src="../images/우는사람.png" alt="사람">
+    
+</body>
+</html>
