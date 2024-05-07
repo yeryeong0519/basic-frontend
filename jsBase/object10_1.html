@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수를 사용해 객체를 만드는 방법(속성, 메소드)</title>
+    <script>
+        function student(name, kor, mat, eng, sci){
+            //속성
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = eng;
+            this.sci = sci;
+        }//생성자 함수 끝
+        //프로토타입: 생성자 함수로 생성된 객체가 공통으로 가지는 공간
+        Student.prototype.getSum = function(){
+            return this.kor + this.mat + this.eng + this.sci;
+        }
+        
+        students.push(new Student('홍길동', 90, 70, 85, 60));
+        students.push(new Student('김철수', 74, 80, 70, 88));
+        students.push(new Student('이영희', 70, 55, 73, 94));
+        document.write("<h2> ** 3학년 1반 성적표 ** </h2")
+        document.write("이름    총점    평균");
+        for(let i in students){
+            document.write(student[i].toString() + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

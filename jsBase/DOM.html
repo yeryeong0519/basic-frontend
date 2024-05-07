@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(DOM:Document Object Model)</title>
+    //브라우저 제어는 봄 문서 제어는 돔
+    <script>
+        window.onload = function () {
+            let header = document.querySelector("#head");
+            setTimeout(function () {
+
+                header.innerHTML = "DOM을 배우기 시작!!";
+                header.style.color = "red";
+            }, 3000);
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="head">자바스크립트</h1>
+
+</body>
+
+</html>

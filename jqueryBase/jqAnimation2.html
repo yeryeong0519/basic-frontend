@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <style>
+        .news{
+            display: none;
+        }
+        .images img{
+            width: 500px;
+        }
+    </style>
+    <script>
+    $(function () {
+        $(function(){
+            $('img').click(function(){
+                $(this).animate({
+                    opacity : 1
+                }, 3000, function(){
+                    $(this).left(2000)
+                })
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <button>이미지보기</button>
+    <div class="images">
+    <img src="../images/Penguins.jpg" alt="Penguins">
+</div>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<script>
+    $(function () {
+        $('img').click(function () {
+            $(this).removeAttr('width')
+
+        });
+        let co = ['red', 'green', 'blue']
+        $('h1').css({
+            color: function (index) { return co[index]; },
+            backgroundColor: 'yellow'
+        });
+        // let content= $('h1').html();
+        // alert(content);
+        $('h1').click(function(){
+        $('h1').html('지금 배우는중...');
+        });
+        $('box').html('<h1>오늘은 수요일</h1>')
+        $('box').text('<h1>오늘은 수요일</h1>')
+    });
+</script>
+
+<body>
+    <img src="../images/Koala.jpg" alt="Koala" width="200">
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메소드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <div id="box">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <script>
+        $(function () {
+            let brsite = [
+                { name: '서울방송', link: 'http://www.sbs.co.kr' },
+                { name: '한국방송', link: 'http://www.kbs.co.kr' },
+                { name: '문화방송', link: 'http://www.imbc' }
+            ];
+            // for (let i = 0; i < brsite.length; i++) {
+            //     let output = '';
+            //     output += '<a href"' + brsite[i].link + '">';
+            //     output += '<h2>' + brsite[i].name + '</h2>';
+            //     output += '</a>';
+            //     document.body.innerHTML += output;
+            // }
+            $.each(vrsite, function(index, item){
+                let output = '';
+                output += '<a href"' + brsite[i].link + '">';
+                output += '<h2>' + brsite[i].name + '</h2>';
+                output += '</a>';
+                document.body.innerHTML += output;
+
+            });
+            // $(선택자).each(function (index, item){
+
+            // })
+            alert(brsite[1].name)
+        })
+    </script>
+    <title>자바스크립트 라이브러리</title>
+</head>
+
+<body>
+    <h1>방송사이트</h1>
+</body>
+
+</html>

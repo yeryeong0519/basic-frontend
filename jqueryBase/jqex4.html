@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립스 라이브러리</title>
+    <script src = "http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <script>
+        $(function(){
+            $('h1').hover(function() {
+                $(this).css({
+                    color : 'red',
+                    background : 'yellow',
+                    border: '3px solid blue'
+                });
+            }, function() {
+                $(this).css('color', 'black').css('backgroundColor', 'white').css('border', 'none');
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리</h1>
+    <h1>파이썬</h1>
+    <h1>자바스크립트</h1>
+    
+</body>
+</html>

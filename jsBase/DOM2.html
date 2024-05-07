@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(DOM:Document Object Model)</title>
+    <script>
+        window.onload = function(){
+            let  head2 = document.createElement("h2");
+            let textNode = document.createTextNode("문서 객체 모델 배우는 중");
+            head2.appendChild(textNode);
+            document.body.appendChild(head2);
+            //h2가 body의 자식으로 들어감.
+            let image = document.createElement("img");
+            image.src = "../images/Penguins.jpg";
+            image.width = 500;
+            image.height = 350;
+            image.alt = "펭귄";
+            image.setAttribute("src", "../images/Penguins.jpg");
+            image.setAttribute("width", 500);
+            image.setAttribute("height", 350);
+            image.setAttribute("alt", "펭귄");
+            document.body.appendChild(image);
+            
+
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        자바스크립트 DOM 생성
+    </h1>
+</body>
+</html>

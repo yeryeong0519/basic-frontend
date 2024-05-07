@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+
+    <title>자바스크립트 라이브러리</title>
+    <style>
+        .high_light_0{background-color: yellow;}
+        .high_light_1{background-color: orange;}
+        .high_light_2{background-color: red;}
+        .high_light_3{background-color: green}
+        .high_light_4{background-color: blue;}
+    </style>
+    <script>
+        $(function(){
+            // for(let i = 0; i < 5; i++){
+            //     $('h1:eq('  +i+  ')').addClass('high_light_' + i);
+            // }
+            /*$('h1').each(function   (index){
+                $(this).addClass('high_light_' + index)
+            })*/
+            // let head=document.querySelector('h1');
+            //$('h1').addClass('high_light_0');
+            $('h1').addClass(function (index){
+                return 'high_light_'+index;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 실무응용</h1>
+</body>
+</html>

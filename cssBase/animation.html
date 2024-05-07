@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+
+    <style>
+        @keyframes colorChange {
+            from{
+                background-color: blue;
+                border: 1px solid blue;
+            }
+            to{
+                background-color: red;
+                border: 3px dotted green;
+                border-radius: 50%;
+            }
+        }
+        @keyframes rotate {
+            from{
+                transform: roatate(0deg)
+            }
+            to{
+                transform:rotate(90deg)
+            }
+            
+                
+        }
+    
+            
+    .box{
+        width: 100px;
+        height : 100px;
+        background-color: blue;
+        margin-bottom: 20px;
+    }
+    .box1{
+        animation-name: colorChange;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation: colorChange 3s alternate infinite, torate 3s alternate infinite;
+    }
+    .box1:hover{
+        animation-play-state: paused;
+    }
+    .box2{
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-delay: 2s;
+    }
+</style>
+
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+</html>

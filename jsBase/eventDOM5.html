@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디폴트 이벤트 제거</title>
+    <script>
+        window.onload = function(){
+            let myForm = document.querySelector("#myForm");
+            myform.onsumit = function(){
+                let pass = document.querySelector("#pass").value;
+                let passCheck = document.querySelector("#passCheck").value;
+                if(pass == passCheck){
+                    alert("성공");
+                }else{
+                    alert("다시 입력해주세요.");
+                    return false;
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="member.jsp" method="post" id="myForm">
+        <p><label for="id">아이디</label>
+            <input type="text" id="id" name="id" required>
+        </p>
+        <p><label for="pass">비밀번호</label>
+            <input type="password" id="id" name="pass" required>
+        </p>
+        <p><label for="passCheck">비밀번호확인</label>
+            <input type="password" id="passCheck" name="passCheck" required>
+        </p>
+        <input type="submit" value="회원가입">
+    </form>
+</body>
+
+</html>

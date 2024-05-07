@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let stop1, stop2;
+            $('h1').on('click', function(){
+                $(this).html(function (index, value){
+                    return value + '*'
+                });
+
+            });
+            stop2 = setTimeout(function(){
+                alert("안녕하세요");
+            }, 10000);
+            //이벤트를 강제종료시키는 메소드
+            stop1 = setInterval(function(){
+                $('h1').last().trigger('click');
+            }, 5000);
+            $('button').click(function(){
+                clearInterval(stop1)
+                clearInterval(stop2)
+            });
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

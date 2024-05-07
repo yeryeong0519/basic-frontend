@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        img {
+            width: 37px;
+            height: 21px;
+            cursor: pointer;
+            position: relative;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('img').click(function (event) {
+                $(this).animate({   
+                    left : '+=50'
+                }, 2000).animate({
+                    width : '+=37'
+                }, 2000).animate({
+                    height : '+=37'
+                }, 2000);
+            });
+            $('button').click(function(){
+                $('img').clearQueye();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>큐 비우기</button>
+    <img src="../images/car_green.jpg" alt="">
+</body>
+
+</html>
+
+
+<!--
+    스택(stack) : FILO
+    큐(Queue) : FIFO
+-->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(function(){
+            let color = ['yellow', 'orange', 'green', 'red', 'gray', 'blue'];
+            // for(let i = 0; i < color.length; i++){
+            //     $('h1:eq('+ i + ')').css('background', color[i]);
+
+            // }
+            // $('h1').css('background', function(index){
+            //     return color[index];
+            // });
+            for(let i = 0; i < color.length; i++){
+                $('h1').eq(i).css('background', color[i]);
+            }
+
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

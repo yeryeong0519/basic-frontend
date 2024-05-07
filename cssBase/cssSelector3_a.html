@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type = checkbox]:checked + div{ /* +는 인접한 형제.. 즉 <div> 부분임 이 코드에선  */
+            height : 0;
+        }
+        div {
+            width: 300px;
+            height: 400px;
+            /* border: 1px solid black; */
+            overflow : hidden;
+            transition : 3s;
+        }
+        div > p{
+            line-height : 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox">뉴스 감추기
+    <div>
+        <h2>[뉴스초점] 대만 25년 만에 최대 강진…불의 고리 '꿈틀'
+        </h2>
+        <p>
+            출연 : 이윤수 전 포항공대 환경공학과 특임교수</p>
+        <p>대만 현지 시각으로 어제 오전, 동남부 지역에 규모 7이 넘는 강진이 발생했습니다.
+
+            25년 만의 최대 강진인데요.
+
+            더 걱정인 건, 이 지진보다 더 치명적인 지진이 일어날 가능성이 있다고 전문가들이 경고하고 있는 겁니다.</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 태그</title>
+    <style>
+        body{
+            font-family: "맑은 고딕", "고딕", "굴림";
+        }
+        header{
+            width: 80%;
+            margin : 0 auto;
+            background-color: lemonchiffon;
+            padding: 10px;
+        }
+        header>h1 {
+            width: 40%;
+            float: left;
+            padding-left: 30px;
+            color: #fff;
+        }
+        header > nav{
+            width: 60%;
+            float: right;
+        }
+        header ul{
+            list-style: none;
+        }
+        header ul li{
+            float: left;
+            margin : 15px;
+        }
+        nav ul li a{
+            text-decoration : none;
+            color: black;
+        }
+        #content>section{
+            width: 80%;
+            margin : 0 auto;
+            border: 5px solid #333;
+            padding: 5px;
+        }
+        #content>section>article{
+            width: 90%;
+            margin: 20px 10px;
+            padding: 20px;
+        }
+        #content>section>article>h2{
+            font-size: 1.2em;
+            background-image: url(../images/bg.png);
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 30px;
+        }
+        #content>aside>article dt{
+            font-weight: bold;
+            color: violet;
+        }
+        #pet1{
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        #pet2{
+            border: 1px dotted blue;
+            border-radius: 20px;
+        }
+        #pet3{
+            border: 2px double green;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        #content>aside{
+            width: 80%;
+            margin : 0 auto;
+            background-color: bisque;
+            padding: 10px;
+        }
+        footer{
+            width: 80%;
+            margin : 0 auto;
+            padding: 10px;
+            background-color: lavenderblush;
+            color: black;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>애완견</h1>
+        <nav>
+            <ul>
+                <li><a href="#">애완견 종류</a></li>
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">건강돌보기</a></li>
+                <li><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section>
+            <article id = "pet1">
+                <h2>활달한 강아지</h2>
+                <dl>
+                <dt>요크셔테리어</dt>
+                    <dd>요크셔 테리어는 영국의 개 품종 중의 하나이며, 한때 노동자들이 기르던 개이며, 쥐잡기용 강아지로 인기가 높았던 애완견이다.</dd>
+                    <dd>털의 색깔은 머리와 사지만 짙은 황갈색이고, 그 외의 다른 부위는 감청색 계통이다. 별명으로는 '요키', '요크'가 있다.</dd>
+                <dt>말티즈</dt>
+                    <dd>말티즈 혹은 몰티즈는 개 품종 중 하나이다. '몰티즈'란 이름은 이 개가 지중해의 몰타 섬이 원산지여서 붙여졌다는게 정설이지만, 지중해의 멜리타 지역에서 유래되었다고
+                        주장하는 학자들도 있다.</dd>
+                <dt>포메라니안</dt>
+                    <dd>포메라니안은 중앙유럽에 있는 포메라니아 지역에서 유래된 스피츠 종류의 반려견이다. 작고 귀여운 외모와 복슬복슬한 털이 특징이며 털빠짐이 있다.</dd>
+                <dt>골든리트리버</dt>
+                    <dd>골든리트리버의 원산지는 영국의 스코틀랜드이다. 또한 골든 리트리버는 근육질의 몸에 건강하고 산뜻한 느낌을 준다.</dd>
+                </dl>
+            </article>
+            <article id = "pet2">
+                    <h2>온순한 강아지</h2>
+                <dl>
+                <dt>시츄</dt>
+                    <dd>중국에서 비롯한 개 품종이며 과거 중국 황실이 기르던 견종이다. 털이 2중모로 되어 있어 거의 빠지지 않으며, 다른 견종에 비해 냄새도 나지 않는다.</dd>
+                <dt>퍼그</dt>
+                    <dd>느긋하고 순하지만 나름대로 고집이 있다. 주인의 명령보다는 자기 뜻대로 행동하려는 경향이 있어서 주인 입장에서는 개가 멍청하거나 자기가 무시당한다는 생각이 들기도 한다.</dd>
+                <dt>래브라도 리트리버</dt>
+                    <dd>래브라도 리트리버는 조렵견, 사냥개, 인명구조견, 탐지견, 안내견, 간호견이다. 장난기가 넘치지만 침착하며 순종적이고 충성심이 높기로 유명하다. 
+                    </dd>
+                </dl>
+            </article>
+            <article id = "pet3">
+                <h2>사납지만 복종적인 강아지</h2>
+                <dl>
+                <dt>미니어쳐핀셔</dt>
+                    <dd>작은 주제에 꽤나 사납고, 성격도 굉장히 활달. 머리가 굉장히 좋아서 주인이 자주 하는 말을 알아듣고 거기에 적합한 행동을 얼른 취한다. </dd>
+                <dt>푸들</dt>
+                    <dd>성격, 크기, 털빠짐, 지능에 이르는 현대 목적견의 요구 조건을 거의 모두 충족 시키기 때문에 매우 선호 되는 반려견이다. 우리나라에서 2번째로 많이 기르는 반려견이다.</dd>
+                <dt>폭스테리어</dt>
+                    <dd>테리어 종의 영국 원산의 사냥개. 사냥개 치고는 키는 36~40cm, 무게는 7~9kg으로 작은 편이다. 현재는 반려견으로 많이 기른다. 저 폭스 테리어의 폭스는 그 폭스 맞다. 여우 사냥을 주로 잘 해서 붙여진 이름이라는듯 하다.</dd>
+                </dl>
+            </article>
+        </section>
+        <aside>
+            <h2>건강한 강아지는</h2>
+            <ul>
+                <li>코가 젖어있고 눈곱이 없어야합니다.</li>
+                <li>털에 윤기가 있는것을 골라야합니다.</li>
+                <li>입에서 고약한 냄새가 나면 병이 있다는 증거입니다.</li>
+                <li>가장 활발하게 움직이는 녀석을 고르는게 좋습니다.</li>
+                <li>강아지들중에서 적당한 체구를 유지한 강아지가 좋습니다.</li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <p>
+            Copyright 2024 pet.com
+        </p>
+    </footer>
+</body>
+
+</html>

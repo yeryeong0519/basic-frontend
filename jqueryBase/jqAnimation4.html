@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <script>
+    $(function (){
+            $('button').click(function(){
+                $('.news').fadeToggle(5000);
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <button>이미지보기</button>
+    <div class="images">
+    <img src="../images/Penguins.jpg" alt="Penguins">
+</div>
+</body>
+</html>
+
+<!-- 
+    toggle method : show와 hide를 번갈아가며 수행
+    slideDown : 슬라이드 형태로 보여줌
+    slideUp : 슬라이드 형태로 사라짐
+    slideToggle : slideDown과 slideUp을 번갈아가며 수행
+    fadeIn : 선명하게 나타납니다.
+    fadeOut : 흐리게 사라집니다.
+
+ -->

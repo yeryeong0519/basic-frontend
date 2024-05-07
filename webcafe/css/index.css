@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+/* usefulArea 영역시작 */
+#usefulArea {
+    width: 280px;
+    margin-right: 30px;
+}
+
+/* 로그인 영역  */
+.login {
+    background-image: radial-gradient(circle at top right, #ffc848, #ff8208);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login>h2 {
+    color: #feff9a;
+    font-size: 1.2em;
+    padding: 0 0 10px 10px;
+}
+
+.login form {
+    background-color: #fff;
+    position: relative;
+    border-radius: 3px 3px 0 0;
+    padding: 10px 10px 0 10px;
+}
+
+.login label {
+    display: inline-block;
+    width: 48px;
+
+}
+
+.login input {
+    width: 100px;
+    height: 18px;
+    padding: 1px 1px 1px 4px;
+    border: 1px solid #ccc;
+}
+
+#userId {
+    margin-bottom: 6px;
+}
+
+.login button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9em;
+    border: 1px solid #ff4e00;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #fe5f18 0%, #fa4306 100%);
+}
+
+.login fieldset {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.memberLink {
+    background-color: #fff;
+    border-radius: 0 0 3px 3px;
+    padding: 0 10px;
+    ;
+}
+
+.memberLink a::before {
+    font-family: "webcafeIcon";
+    content: "g";
+    color: #fa3d00;
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
+}
+
+.join {
+    float: left;
+    padding: 10px 0;
+}
+
+.find {
+    float: right;
+    padding: 10px 0;
+}
+/*유효성 검사 영역*/
+
+.validation{
+    margin-top: 20px 0;
+}
+
+.validation li{
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #fff 0, #ebebeb 100%);
+
+}
+.validation a{
+    display: block;
+    height: 30px;
+    color: #9c9c9c;
+    background: url(images/validation_icon.png) no-repeat 20px 5px;
+    background-size: 20px 20px;
+    line-height: 30px;
+    text-indent: 45px;
+}
+/*웹 관련 용어 영역*/
+.term {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 20px;
+    background-image: linear-gradient(to bottom, #fff 0%, #f4f4f4 100%);
+}
+.term>h2{
+    font-size: 1.2em;
+}
+
+.term d1{
+    margin-top: 15px;
+    overflow: hidden;
+
+}
+.term dt{
+    float: right;
+    width: 130px;
+    color: #296897;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.term dd:nth-of-type(1){
+    float: left;
+}
+.term dd:nth-of-type(2){
+    float: right;
+    width: 130px;
+    line-height: 1.45;
+    text-align: justify;
+}
+/* usefulArea 영역종료 */
+
+/* infoArea 영역시작 */
+#infoArea {
+    width: 430px;
+    margin-right: 30px;
+}
+/*웹 카페 검색 영역*/
+.search{
+    background-image: linear-gradient(to bottom, #ddd 0%, #f8f8f8 50%, #fff 100%);
+    border-radius: 15px 15px 0 0;
+}
+
+.search label{
+    padding: 2px 0 4px 2px;
+    font-weight: bold;
+    color: #999;
+}
+.search label::before{
+    font-family: "webcafeIcon";
+    content: "z";
+    font-size: 1.5em;
+    color: #7d7d7d;
+    font-weight: normal;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+#keyword{
+    width: 240px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+/* infoArea 영역종료 */
+
+/* linkArea영역시작 */
+#linkArea {
+    width: 230px;
+    margin-right: 30px;
+}
+
+.btnEventArea {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btnEventArea a{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 20px;
+    background-image: url(images/back_forward.png) no-repeat;
+    background-repeat: no-repeat;
+}
+.btnEventPrev{
+    background-position: 0 0;
+}
+.btnEventNect{
+    background-position: 100% 0;
+}
+/*관련 사이트 영역*/
+.relatedLink h2{
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.relatedLink ul{
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.relatedLink ul:hover{
+    height: 125px;
+    padding: 10px 0;
+}
+.relatedLink li{
+    height: 25px;
+    line-height: 25px;
+    text-indent: 1.5em;
+}
+.relatedLink a{
+    display: block;
+}
+.hotLink {
+    margin-top: 20px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #fff 0%, #f4f4f4 100%);
+    padding: 10px 12px 8px 10px;
+}
+.hotLink h2{
+    font-size: 1.2em;
+}
+.hotLink span{
+    color: #ff3c00;
+}
+.hotLink .more{
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    padding: 8px;
+
+}
+.hotLink ol{
+    margin-top: 5px;
+    padding: 0;
+    overflow: hidden;
+}
+.hotLink li{
+    position: relative;
+    margin-top: 7px;
+    counter-increment: number;
+}
+
+.hotLink li:before{
+    content: counter(number, decimal);
+    padding: 2px 5px;
+    background-color: #a1a1a1;
+    border-radius: 3px;
+    margin-right: 5px;
+    color: #fff;
+
+}
+.hotLink li:last-child{
+    margin-bottom: 2px;
+}
+.hotLink em{
+    float: right;
+    width: 8px;
+    height: 0;
+    padding-top: 12px;
+    overflow: hidden;
+    background-color: url(images/rank.png) no-repeat;
+}
+.hotLink .up{
+    background-position: 0 0;
+}
+.hotLink .stop{
+    background-position: 0 50%;
+}
+.hotLink .down{
+    background-position: 0 100%;
+}
+
+
+/* linkArea 영역종료 */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        input, label {
+            width: 95%;
+            margin-bottom: 12px;
+            padding: 0.4em;
+        }
+        #dialogTitle {
+            font-size: 1.3em;
+            text-align: center;
+            color: #00f;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('#dialog').dialog({
+                autoOpen: false,
+                buttons: {
+                    "저장": function(){
+                        let eventName = $('#event-name').val();
+                        let eventDate = $('#event-date').val();
+                        $('<h2></h2>').html(eventName + ' : ' + eventDate).appendTo('#output');
+                        $('#event-name').val('');
+                        $('#event-date').val('');
+                        $('#dialog').dialog('close');
+                    },
+                    "초기화": function(){
+                        $('#output').empty(); // Clear the content of the output div
+                    },
+                    "취소": function(){
+                        $('#event-name').val('');
+                        $('#event-date').val('');
+                        $('#dialog').dialog('close');
+                    }
+                }
+            });
+            $('.dialogOpen').click(function(){
+                $('#dialog').dialog('open');
+            });
+            $('#event-date').datepicker({
+                dateFormat : 'yy년 mm월 dd일',
+                numberOfMonths: 1
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 저장되는 장소 -->
+    <h1>일정관리하기</h1>
+    <button class="dialogOpen">일정생성</button>
+    <hr>
+    <div id="output"></div>
+    <!-- 팝업창으로 일정관리 구현 -->
+    <div id="dialog" title="일정관리">
+        <div id="dialogTitle">일정 입력하기</div>
+        <label for="event-name">일정이름</label>
+        <input type="text" id="event-name">
+        <label for="event-date">날짜</label>
+        <input type="text" id="event-date">
+    </div>
+</body>
+</html>

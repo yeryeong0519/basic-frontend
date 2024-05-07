@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립스 라이브러리</title>
+    <script src = "http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <script>
+        $(function(){
+            // $('*').css('color', 'red');    // * : 전체선택, $(선택자)).메소드(속성이름, 속성값); 
+            // $('p').css('backgroundColor', 'yellow');
+            // $('#target').css('border', '1px solid red');
+            // $('.item').css('color', "#00f")
+            // $('.select').css('background', 'yellow');
+            // $('.item.select').css('color', 'blue');
+            // $('p.item').css('color', 'blue'); 
+            // $('h1,p').css('color', 'blue');
+            $('p').hover(function () {
+                $(this).css('color', 'red');
+            }, function () {
+                $(this).css('color', 'black');
+
+            });
+        })
+    </script>
+</head>
+<body>
+    <h1> 제이쿼리</h1>
+    <p class = "item">자바스크립트로 만들어진 라이브러리</p>
+    <ul>
+        <li>선택자</li>
+        <li>메소드</li>
+        <li class = "item">이벤트</li>
+        <li class = "select">애니메이션</li>
+        <li>플러그인</li>
+        <li>응용기술</li>
+    </ul>
+    <p id = "target">개인 홈페이지 제작</p>
+    <p class = "item select">스크립트 언어(자바스크립트, 파이썬)</p>
+</body>
+</html>

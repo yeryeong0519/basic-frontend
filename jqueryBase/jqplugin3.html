@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.innerfade.js"></script>
+    <style>
+        #inner_fade > img {
+            width: 500px;
+            height: 350px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(function(){
+            let sw = false;
+            let posLeft, posTop;
+
+            $('img').on({
+                mousedown: function(event) {
+                    sw = true;
+                    posLeft = event.offsetX;
+                    posTop = event.offsetY;
+                    event.preventDefault();
+                },
+                mousemove: function(event) {
+                    if(sw == true) {
+                        event.preventDefault();
+                        let x = event.pageX - posLeft;
+                        let y = event.pageY - posTop;
+                        $(this).css({
+                            left: x,
+                            top: y
+                        });
+                        event.preventDefault();
+                    }
+                },
+                mouseup: function() {
+                    sw = false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="inner_fade">
+        <img src="../images/car_green.jpg" alt="">
+        <a href="http://www.kbs.co.kr"></a>
+    </div>
+</body>
+</html>

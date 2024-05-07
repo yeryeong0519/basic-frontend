@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+    <style>
+        p::first-letter{
+            font-size : 2em;
+            color: red;
+        }
+        p::first-line{
+            background-color: yellowgreen;
+        }
+        p::selection{
+            background-color: green;
+            color: blue;
+        }
+        h3::before{
+            content : "환절기 ";
+            color : red;
+        }
+        h3::after{
+            content : "-이젠 아카데미";
+            color : blue;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>오늘의 뉴스</h2>
+    <p>기네스 세계 기록’은 캐나다 앨버타주에 사는 도나잔 와일드(58)가 2019년 캐나다 출신 요가강사인 데이나 글로와카(당시 48살)가 세운 기네스 기록(4시간19분55초)보다 10분 이상 늘어난 기록을 세웠다고 지난달 27일(현지시각) 밝혔다. 남성 플랭크 기네스 세계 기록은 지난해 체코 출신 요제프 샤렉이 세운 9시간38분47초다.</p>
+    <h3>감기조심하세요</h3>
+</body>
+</html>

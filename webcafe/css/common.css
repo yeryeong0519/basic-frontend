@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+/*초기화*/
+html,
+body,
+div,
+header,
+nav,
+section,
+aside,
+article,
+footer,
+figure,
+figcaption,
+fieldset,
+legend,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+fieldset {
+    border: 0;
+}
+
+/*숨김 컨텐츠*/
+.hidden,
+legend,
+caption {
+    position: absolute;
+    left: -9999px;
+}
+
+/* 웹 폰트 다운로드 */
+@font-face {
+    font-family: "Nanum";
+    font-weight: 400;
+    src: url("font/NanumGothic.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "NanumBold";
+    font-weight: 600;
+    src: url("font/NanumGothicBold.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "NanumEX";
+    font-weight: 900;
+    src: url("font/NanumGothicExtraBold.ttf")format("truetype")
+}
+
+@font-face {
+    font-family: "webcafeIcon";
+    font-weight: 400;
+    src: url("font/webcafeIcon.ttf")format(truetype),
+        url("font/webcafeIcon.svg#webcaferegular")format("svg");
+}
+
+/* 링크스타일 */
+a:link {
+    color: #4f4f4f;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #8a8e91;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #f00;
+    text-decoration: none;
+}
+
+/* 기본스타일 */
+body {
+    color: #000;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+    font-family: "Nanum";
+}
+
+/* 건너뛰기 링크 */
+#skipNav {
+    position: absolute;
+    left: -9999px;
+}
+
+#skipNav:focus {
+    left: 0;
+    margin: 3px 0 0 3px;
+    padding: 5px 15px;
+    background-color: #000;
+    color: #fff;
+    z-index: 10;
+}
+
+/*전체적인 레이아웃*/
+#header,
+#visual,
+#contentsArea,
+#slogan,
+#footerInner {
+    width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    background-image: url(images/bg_flower.png), linear-gradient(to bottom, #c7c7c7 0%, #fff 70%, #fff 100%);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#header {
+    position: relative;
+    height: 110px;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+}
+
+#header .logo {
+    position: absolute;
+    top: 37px;
+    left: 60px;
+}
+
+#header .infoLink {
+    text-align: right;
+}
+
+#header .infoLink>li {
+    display: inline-block;
+    padding: 8px 0 7px 3px;
+}
+
+#header .mainMenu ul {
+    display: none;
+}
+
+#header .infoLink a::before {
+    content: ":";
+    padding-right: 8px;
+}
+
+#header .infoLink a::before {
+    content: ':';
+    padding-right: 8px;
+}
+
+#header .infoLink>li:first-child a::before {
+    content: "";
+}
+
+#header .mainMenu>li {
+    position: relative;
+}
+
+#header .mainMenu a {
+    display: inline-block;
+}
+
+#header .mainMenu {
+    background-image: linear-gradient(to bottom, #ffc848 0%, #ff8208 40%, #ff8208 60%, #ffc848 100%);
+    height: 45px;
+    padding-left: 300px;
+    border-top: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+}
+
+#header .mainMenu>li>a {
+    font-family: "NanumEX";
+    font-size: 1.16em;
+    padding: 15px 20px 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    border-left: 1px solid #fff;
+    text-shadow: 1px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(0, 0, 0, 0.3),
+        0 1px rgba(0, 0, 0, 0.3), 0, -1px rgba(0, 0, 0, 0.3);
+}
+
+#header .mainMenu>li>a:hover,
+#header .mainMenu>li>a:focus {
+    color: yellow;
+}
+
+#header .mainMenu>li>a:hover::after,
+#header .mainMenu>li>a:focus::after {
+    content: "";
+    display: block;
+    background-color: #000;
+    height: 2px;
+    width: 100%;
+    position: relative;
+    top: 2px;
+}
+
+#header .mainMenu ul a:hover::before,
+#header .mainMenu {}
+
+#header .mainMenu ul a {
+    padding: 8px 0 7px 15px;
+}
+
+#header .mainMenu ul a::before {
+    content: "r";
+    font-family: webcafeIcon;
+}
+
+#header .mainMenu ul {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+#header .mainMenu>li:hover ul {
+    display: block;
+}
+
+#header .qna {}
+
+#header.archive {
+    right: 0;
+}
+
+.aboutHTML {
+    display: block;
+}
+
+/* 헤더 영역 끝*/
+/* 비주얼 영역 시작 */
+
+@keyframes textAni {
+    from {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        font-size: 0;
+    }
+
+    to {
+        top: 75px;
+        left: 400px;
+        opacity: 1;
+        font-size: 2em;
+    }
+}
+
+@keyframes flowerAni {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+#visual {
+    height: 120px;
+    position: relative;
+}
+
+#visual>p {
+    position: absolute;
+    top: 75px;
+    left: 400px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bold;
+    animation: textAni 1s;
+}
+
+#visual::before,
+#vidusl::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    animation: flowerAni 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#visual::before {
+    background-image: url(images/ani_flower_01.png),
+        url(images/ani_flower_02.png);
+    background-repeat: no-repeat;
+    background-position: 0 5px, 670px 0;
+}
+
+#visual::after {
+    background-image: url(images/ani_flower_03.png),
+        url(images/ani_flower_04.png);
+    background-repeat: no-repeat;
+    background-position: 300px 35px, 800px 65px;
+    animation-delay: 1s;
+}
+
+/*비주얼 영역 끝*/
+/*컨텐츠 영역 공통부분 시작*/
+
+#contentsArea {
+    overflow: hidden;
+    min-height: 400px;
+    padding: 30px 0 30px 30px;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/*컨텐츠 영역 공통부분 끝*/
+
+/*슬로건 영역 시작*/
+#slgan {
+    position: relative;
+    padding: 15px 0;
+}
+
+#slogan>h2 {
+    width: 110px;
+    height: 90px;
+    background: url(images/coffee.png)no-repeat;
+    background-size: 110px 90px;
+    text-indent: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    left: 30px;
+    bottom: -25px;
+}
+
+#slogan>p {
+    margin: 0 100px 0 200px;
+    color: #a09784;
+    font-size: 1.08em;
+}
+
+#slogan q {
+    font-weight: bold;
+}
+
+#slogan q::before {
+    font-size: 3em;
+    color: #765725;
+    position: relative;
+    top: 15px;
+    left: -5px;
+}
+
+#slogan q::after {
+    content: "";
+}
+
+/*슬로건 영역 끝*/
+/*푸터 영역 시작*/
+#footer {
+    padding: 15px 0;
+    background-image: linear-gradient(to bottom, #c7c7c7 0%, #fff 70%, #fff 100%);
+}
+
+#footerLogo {
+    position: absolute;
+    left: 35px;
+    top: 45px;
+}
+
+.guide,
+address,
+.copyright {
+    margin-left: 200px;
+    margin-right: 100px;
+}
+
+.guide {
+    background-color: #7b8385;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.guide li {
+    display: inline-block;
+}
+
+.guide a {
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px 10px 0;
+}
+
+.guide a::before {
+    content: "|";
+    padding-right: 20px;
+}
+
+.guide li:first-child a::before {
+    content: "";
+
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 5px;
+}
+
+address>span {
+    margin-right: 10px;
+}
+
+.techLogoArea {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

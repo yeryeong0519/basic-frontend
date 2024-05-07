@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let fruits = ["수박", "참외", "자두", "복숭아"];
+        for(let i in fruits){
+            document.write(fruits[i] + "<br>");
+        }
+        alert(fruits[0]);
+        //객체
+        let product = {
+            제품명 : '건조망고',
+            유형 : '당절임',
+            가격 : 7000,
+            원산지 : '필리핀'
+        };
+        // let 원산지 = '유형';
+        // alert(product[원산지]);
+        for(let key in product){
+            document.write(product[key] + "<br>");
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

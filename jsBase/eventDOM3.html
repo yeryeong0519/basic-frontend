@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let btn1 = document.querySelector("#buttonA");
+            let btn2 = document.querySelector("#buttonB");
+            let countA = document.querySelector("countA");
+            let countB = document.querySelector("countB");
+            btn1.onclick = function(){
+                countA.innerHTML += 1;
+            }
+            btn2.onclick = function(){
+                countB.innerHTML += 1;
+            }
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <button id="buttonA">김철수 후보</button>
+    <button id="buttonB">홍길동 후보</button>
+    <h1>김철수 - <span id="countA">0</span></h1>
+    <h1>홍길동 - <span id="countB">0</span></h1>
+    
+</body>
+</html>

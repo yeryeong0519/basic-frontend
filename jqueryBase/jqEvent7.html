@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //현재 존재하는 객체만 이벤트를 발생
+            // $('h1').on('click', function(){
+            //     let len = $('h1').length;
+            //     let targetHtml = $(this).grml();
+            //     $('#wrap').append('<h1>' + len + '-' + targetHtml + '</h1>');
+                
+            // });
+            //현재뿐만아니라 미래에 존재할 객체까지도 이벤트를
+            $(부모선택자).on(이벤트이름, '자식선택자', function(){
+                let len = $('h1').length;
+                let targetHtml = $(this).grml();
+                $('#wrap').append('<h1>' + len + '-' + targetHtml + '</h1>');
+            })
+            
+        });
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>메르스</h1>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <title>자바스크립트 라이브러리</title>
+    <script>
+        $(function(){
+            $('h1').css('background', 'yellow')
+            $('h1:even').css('color', 'red')
+            $('h1:odd').css('color', 'blue')
+            $('h1').css('background', 'yellow').filter(':even').css('color', 'red').end().filter(':odd').css('color','blue');
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 실무응용</h1>
+</body>
+</html>

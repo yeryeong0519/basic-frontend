@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<script>
+    $(function () {
+        // $('.list3').parent().css('border', '2px solid red');
+        $('#box1>section').children().css()({
+            backgroundColor:'yellow',
+            color:'red',
+            border:'2px solid #00f'
+        });
+        // $('list3').next().css('border', '2px solid red')
+        // $('list3').nextAll().css('border', '2px solid red')
+        // $('list3').prev().css('border', '2px solid red')
+        // $('#box>h1').nextUntil('p').css('border', '2px solid red');
+        // $('.list3').siblings().css('background', 'yellow');
+        $('#box1').find('.list3').css('background', 'yellow');
+
+    });
+</script>
+
+<body>
+    <div id="box1">
+        <h1>메소드 형태 선택자</h1>
+        <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li class="list3">리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+        </ul>
+        <p>나는 단락</p>
+        <section>
+            <h2>나는 섹션 제목</h2>
+            <p>나는 섹션 단락</p>
+        </section>
+    </div>
+</body>
+
+</html>

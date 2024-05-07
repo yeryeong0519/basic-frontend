@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        img{
+            width: 37px;
+            height: 21px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('img').click(function(){
+                let amount = parseInt(prompt("수량은?"));
+                alert(amount + 10);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="../images/car_green.jpg" alt="">
+</body>
+
+</html>
+

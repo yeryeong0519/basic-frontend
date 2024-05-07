@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그들2</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label>이름</label>
+            <input type = "text" value = "홍길동" readonly>
+            <input type = "hidden" name = "code" value = "1234">
+        </p>
+        <h3>좋아하는 스포츠종목은?</h3>
+        <p>
+            <input type = "checkbox" name = "sports1" value = "football">축구
+            <input type = "checkbox" name = "sports2" value = "baseball">야구
+            <input type = "checkbox" name = "sports3" value = "volleyball">배구
+        </p>
+        <h3>여름방학 특강 - 수강할 과목을 선택하세요(1과목만 선택가능)</h3>
+        <label><input type="radio" name="subject" value="eng" checked>영어회화</label>
+        <label><input type="radio" name="subject" value="ch">중국어회화</label>
+        <label><input type="radio" name="subject" value="jp">일어회화</label>
+        <p>
+            <label fr = "address">주소</label>
+            <input type = "text" name = "address" id = "address"
+        </p>
+        <fieldset> <!--필드셋은 묶어서 보여주는 역할-->
+            <legend>과 티셔츠 설문</legend>
+            <p>올해 과 티(T)를 만들려고합니다. 원하는 색상을 추천해주세요.</p>
+            <label>선호색상<input type = "color" value = "#ff0000" name = "choice"></label>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

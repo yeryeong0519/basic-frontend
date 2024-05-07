@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리 관련 속성들</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: blue;
+            margin: 20px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .box1{
+            border-style: solid;
+        }
+        .box2{
+            border-style: dotted;
+        }
+        .box3{
+            border-style: double;
+        }
+        #target{
+            width: 300px;
+            height: 300px;
+            border: 20px solid color rgb(199, 136, 41);
+            /* border-top-left-radius: 100px;
+            border-top-right-radius: 100px; */
+            border-radius: 50px 50px 0 0;
+            background-color: rgb(241, 225, 169);
+        }
+        #target h2{
+            text-align: center;
+            line-height: 160px;
+            color: gold;
+
+        }
+    </style>
+</head>
+<body>
+    <div class = "box box1"></div>
+    <div class = "box box2"></div>
+    <div class = "box box3"></div>
+    <div id="target">
+        <h2>금요일</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <style>
+        .news{
+            display: none;
+        }
+    </style>
+    <script>
+    $(function () {
+        $('button').click(function(){
+            $('.news').slideToggle(2000);
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <button>뉴스토글</button>
+    <div class="news">
+    <p>챗GPT를 필두로 지난해부터 미국 증시를 휩쓸었던 생성형 인공지능(AI) 테마가 올해도 미국 증시를 우상향 시킬 것이라는 보도가 나왔다. 심지어는 미국 연방준비제도(Fed·연준)의 금리 인하가
+        없어도 괜찮다는 분석이다.</p>
+    <p>28일(현지 시각) 블룸버그통신은 ‘월스트리트 강세론자들은 금리 인하 없이도 증시 반등이 계속될 것이라고 말한다’는 제목의 기사에서 견고한 성장과 챗GPT를 비롯한 생성형 인공지능이 미국 증시의
+        기록적인 상승을 유지하게 할 것이라고 전했다. 통신에 따르면 지난해 11월 이후 그간 미국 S&P500지수는 계속해서 상향 그래프를 그렸는데 4월 들어 약세가 나타나면서 투자자들이 이번 하락을
+        단지 일시적인 현상인지, 금리 인하가 지연되면서 하락세로 돌아설 것인지에 대해 고민하고 있다.
+    </p>
+</div>
+</body>
+</html>

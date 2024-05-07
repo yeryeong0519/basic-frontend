@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jQuery.com/jQuery-latest.min.js"></script>
+    <style>
+        #person{
+            position: relative;
+        }
+        #person > img{
+            position:absolute
+        }
+    </style>
+    <script>
+        $('button').click(function(){
+            $('#persion>img').eq(2).fadeOut(10000, function(){
+                $('#person>img').eq(1).fadeOut(10000);
+        });
+    });
+</script>
+</head>
+<body>
+    <div id="person">
+        <button>나의 성장 모습</button>
+        <img src="../images/송해.jpg" alt="">
+        <img src="../images/호동.jpg" alt="">
+        <img src="../images/형돈.jpg" alt="">
+    </div>
+</body>
+</html>
+
+<!-- 
+    toggle method : show와 hide를 번갈아가며 수행
+    slideDown : 슬라이드 형태로 보여줌
+    slideUp : 슬라이드 형태로 사라짐
+    slideToggle : slideDown과 slideUp을 번갈아가며 수행
+    fadeIn : 선명하게 나타납니다.
+    fadeOut : 흐리게 사라집니다.
+
+ -->

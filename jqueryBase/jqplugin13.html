@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        .box{
+            padding: 5px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('#buttonRadio').click(function(){
+                $(this).toggleClass('ui-state-active')
+            });
+            $('buttonRadio').hover(function(){
+                $(this).addClass('ui-state-hover');
+            }, function(){
+                $(this).removeClass('ui-state-hover')
+            });
+            $('#radiobox').buttonset();
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="buttonRadio" class = "box ui-state-default ui-corner-all"></div>
+    <div>
+        <p>지금은 제이쿼리 UI 플러그인 사용법</p>
+    </div>
+    <div>
+        <div id="radiobox">
+        <input type="radio" id="highlight" name = "theme">
+        <label for="highlight">highlight</label>
+        <input type="radio" id="error" name = "theme" value = "error">
+        <label for="error">error</label>
+        <input type="radio" id = "error-text" name = "theme" value = "error-text">
+        <label for="error-text">error-text</label>
+        <input type="radio" id = "disabled" name = "theme" value = "disabled">
+        <label for="disabled">disabled</label>
+    </div>
+    </div>
+    <div>
+        <p>우아한테크캠프 지원은 4월 3일 오후 1시부터 프로그래머스 사전접수 페이지를 통해 시작됩니다.</p>
+        <p>기타 문의사항은 techcamp@woowahan.com으로 주시면 보다 신속하고 상세하게 안내받으실 수 있습니다</p>
+    </div>
+</body>
+</html>

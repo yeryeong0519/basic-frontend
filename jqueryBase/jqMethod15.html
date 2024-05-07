@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<script>
+    $(function () {
+        $('#images>img').css('width', 250);
+        setInterval(function(){
+            $('#images>img').first().appendTo('#images');
+        },2000);
+    });
+</script>
+
+<body>
+    <h1>
+        문서객체이동
+    </h1>
+    <div id = "images">
+        <img src="../images/Koala.jpg" alt="">
+        <img src="../images/Tulips.jpg" alt="">
+        <img src="../images/Lighthouse.jpg" alt="">
+        <img src="../images/Penguins.jpg" alt="">
+        <img src="../images/Jellyfish.jpg" alt="">
+    </div>
+
+    </div>
+</body>
+
+</html>
+
+<!--
+$(생성될 객체).appendTo(장소);
+$(생성될 객체).prependTo(장소);
+$(영역).append(생성될객체);
+$(영역).prepend(생성될객체);
+-->

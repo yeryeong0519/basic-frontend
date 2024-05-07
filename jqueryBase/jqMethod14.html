@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<script>
+    $(function () {
+        let title = '<h2>남극펭귄</h2>';
+        let sub = '<p>이번 축제에는 초대가수 홍길동이 출현합니다.</p>'
+        $('festival').append(title, sub);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        let content = [
+            {name:'김철수', address : '서울시 종로구'},
+            {name:'이영희', address : '서울시 강남구'},
+            {name:'홍길동', address : '서울시 영등포구'}
+
+        ];
+        $('#address>div').append(function (index){
+            let item = content[index];
+            let output = '';
+            output += '<h2>' + item.name + '</h2>';
+            output += '<p>' + item.address + '</p>';
+            return output;
+        });
+        $('#address>div').css({
+            border: '1px solid blue',
+            'margin-bottom':'10px'
+        })
+=======
+>>>>>>> 2eea78742bd617b881d0c75f88ea62cdb9534e9e
+>>>>>>> d29ef6a (Initial commit)
+    });
+</script>
+
+<body>
+    <h1>
+        문서객체생성
+    </h1>
+    <div id = "festival"></div>
+
+    <div id="address">
+        <h1>주소록</h1>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
+
+<!--
+$(생성될 객체).appendTo(장소);
+$(생성될 객체).prependTo(장소);
+$(영역).append(생성될객체);
+$(영역).prepend(생성될객체);
+-->

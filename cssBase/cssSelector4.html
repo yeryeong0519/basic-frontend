@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성선택자</title>
+</head>
+<style>
+    img {
+        width: 200px;
+        height: 300px;
+    }
+    img[src$="png"]{
+        border : 3px solid red;
+    }
+    img[src $= "jpg"]{
+        border : 3px solid green;
+    }
+    img[src$="gif"]{
+        border : 3px solid blue;
+    }
+</style>
+
+<body>
+    <h2>오늘의 교재소개</h2>
+    <img src="../images/jajq.png" alt="교재">
+    <img src="../images/node.jpg" alt="교재">
+    <img src="../images/ux.gif" alt="교재">
+</body>
+
+</html>

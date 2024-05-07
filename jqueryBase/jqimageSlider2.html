@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #animation_canvas{
+            position: relative;
+            width: 600px;
+        }
+        .slider_panel{
+            width: 3000px;
+            position: relative;
+        }
+        .slider_image{
+            width: 600px;
+        }
+        .slider_text_panel{
+            position: absolute;
+            top: 200px;
+            left: 50px;
+        }
+        .control_button{
+            position: relative;
+            cursor: pointer;
+            background: url(../images/point_button.png);
+            width: 12px;
+            height: 46px;
+            float: left;
+        }
+        .control_button:hover{
+            top: 16px;
+        }
+        .left_control, .right_control{
+            position: absolute;
+            top: 170px;
+            cursor: pointer;
+        }
+        .left_control{
+            left: 5px;
+        }
+        .right_control{
+            right: 5px;
+        }
+    </style>
+    <script>
+        $(function(){
+            let index = 0;
+            moveSlider(index);
+            $('.control_button').click(function(){
+                index = $(this).index();
+                moveSlider(index);
+                $('.slider_panel').animate({
+                    left: -(index * 600)
+                }, 'slow');
+                $('.control_button').removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.right_control').click(function(){
+                index++;
+                moveSlider(index);
+            });
+            function moveSlider(index){
+                if(index == 4){
+                    $('.right_control').fadeOut('normal');
+                } else {
+                    $('.right_control').fadeIn('normal');
+                }
+                if(index == 0){
+                    $('.left_control').fadeOut('normal');
+                } else {
+                    $('.left_control').fadeIn('normal');
+                }
+                $('.slider_panel').animate({
+                    left: -(index * 600)
+                }, 'slow');
+                $('.control_button').removeClass('active');
+                $('.control_button').eq(index).addClass('active');
+                $('.slider_text').hide();
+                $('.slider_text').eq(index).fadeIn();
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>이미지 슬라이더</h1>
+    <!--이미지 슬라이더 영역-->
+    <div id="animation_canvas">
+        <!--슬라이더 패널 : 움직이는 이미지가 전환되는 효과-->
+        <div class="slider_panel">
+            <img class="slider_image" src="../images/Koala.jpg" alt="Koala">
+            <img class="slider_image" src="../images/Desert.jpg" alt="Desert">
+            <img class="slider_image" src="../images/Lighthouse.jpg" alt="Lighthouse">
+            <img class="slider_image" src="../images/Jellyfish.jpg" alt="Jellyfish">
+            <img class="slider_image" src="../images/Penguins.jpg" alt="Penguins">
+        </div>
+        <div class="slider_text_panel">
+            <div class="slider_text">
+                <h2>Koala</h2>
+                <p>호주 동부에 서식하는 유대하강, 캥거루목에 속하는 동물.수명은 15~20년 정도이며 몸길이 60∼80㎝이고 몸무게는 수컷이 약 10.5㎏, 암컷은 약 8.2㎏이다.</p>
+            </div>
+            <!-- Add other slider_text divs similarly -->
+        </div>
+        <div class="control_panel">
+            <div class="control_button"></div>
+            <div class="control_button"></div>
+            <div class="control_button"></div>
+            <div class="control_button"></div>
+            <div class="control_button"></div>
+        </div>
+        <div class="left_right_control_panel">
+            <img class="left_control" src="left_arrow_image.jpg" alt="Left Arrow">
+            <img class="right_control" src="right_arrow_image.jpg" alt="Right Arrow">
+        </div>
+    </div>
+</body>
+</html>

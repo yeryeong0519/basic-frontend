@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <style>
+        #room {
+            width: 600px;
+            height: 700px;
+            border: 3px solid black;
+            text-align: center;
+            display: inline-block;
+            background-color: black;
+        }
+        #room img {
+            opacity: 0;
+        }
+        .sw {
+            vertical-align: bottom;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script></head>
+    <script>
+        $(function () {
+            let sw=false;
+            $('.sw').click(function () {
+                sw=!sw;
+                if(sw) {
+                    $(this).attr('src','../images/light-switch.png');
+                    $('#rooom').css('backgroundColor','#fff');
+                    $('#room img').css('opacity',1);
+                }else {
+                    $(this).attr('src','../images/light-switch1.png');
+                    $('#rooom').css('backgroundColor','#000');
+                    $('#room img').css('opacity',0);
+                }
+            });
+        });
+    </script>
+<body>
+    <div id="room">
+        <img src="../images/귀신.jpg" alt="">
+    </div>
+    <img class="sw" src="../images/light-switch1.png" alt="">
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리 - 제이쿼리 이벤트</title>
+    <script src="js/jquery-3.7.1.min.js"></script>   
+    <style>
+        #canvas {
+            border: 3px solid black;
+            margin-top: 10px;
+        }
+        .clear {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>    
+        $(function () { 
+            let sw=false;
+            let can=document.getElementById('canvas');  // canvas 태그는 이벤트 태그에 적용이 안되므로 변수로 만들어서 적용 시켜줘야함.
+            let context=can.getContext('2d');
+            let position, x, y;
+            let lineWidth=1;
+            let oldColor, oldLineWidth; //지우개 해제하면 원래 색상과 굵기로 돌아오기 위한 준비 단계
+            let color='#000';
+            let clearSW=false;
+            $('button').click(function () {
+                can.width=can.width;
+            });
+            
+            $('.clear').click(function () {
+                clearSW=!clearSW;
+                if(clearSW) {
+                    $(this).css('border', '3px solid black');
+                    $(can).css('cursor', 'grabbing');
+                    oldColor=color; //이전 그리던 색상값
+                    oldLineWidth=lineWidth; //이전 그리던 굵기 값
+                    color="#fff";   //지우개 색상
+                    lineWidth=30;   //지우개 크기
+                }else {
+                    $(this).css('border', '3px solid #ccc');
+                    $(can).css('cursor', 'default');
+                    color=oldColor;
+                    lineWidth=oldLineWidth;
+                }
+            });
+
+            $('select').change(function () {
+                lineWidth=$('select>option:selected').val();  //val는 input태그에서 값을 가져오는 것
+            });
+            
+            $('.colorChange').change(function () {
+                color=$(this).val();
+            });
+
+            $(can).on({
+                mousedown : function (event) {
+                    sw=true;
+                    console.log('캔버스 위에서 마우스를 눌렀습니다');
+                    position=$(this).offset();     //offset는 위치 값을 가져옴
+                    x=event.pageX-position.left;  //마우스를 눌렀을 때 위치 값을 가져와야 하지만,웹브라우저의 x 값 pageX는 offset에서 left로 떨어진 값을 말한다.
+                    y=event.pageY-position.top;
+                    context.beginPath();
+                    context.moveTo(x,y);   //그래픽 그릴 위치를 갖다 놓는 것
+                },
+                mousemove : function (event) {
+                    if(sw==true) {
+                        console.log('캔버스 위에서 누른 상태에서 마우스가 돌아다니고 있습니다.');
+                        position=$(this).offset();     //offset는 위치 값을 가져옴
+                        x=event.pageX-position.left;  
+                        y=event.pageY-position.top;
+                        context.lineWidth=lineWidth;
+                        context.strokeStyle=color;
+                        context.lineTo(x,y);  // 선의 위치를 
+                        context.stroke();     // 선을 그려쥼
+                    }else {
+                        console.log('캔버스 위에서 마우스가 그냥 돌아다니고 있습니다.');
+                    }
+                },
+                mouseup : function (event) {
+                    sw=false;
+                    console.log('캔버스 위에서 마우스를 뗐습니다');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <strong>***낙서장***</strong>
+        <span>붓의 두께</span>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>8</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+            <option>25</option>
+        </select>
+        <span>붓의 색상</span>
+        <input type="color" class="colorChange">
+        <span>지우개</span>
+        <div class="clear"></div>
+        <button>새 도화지</button>
+    </div>
+    <canvas id="canvas" width="800" height="500" ></canvas>
+</body>
+</html>

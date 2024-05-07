@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<script>
+    $(function () {
+        $('<h2>남극펭귄</h2>').appendTo('#festival');
+        $('<img').attr({
+            src: "../images/Penguins.jpg",
+            width: 500,
+            height: 350
+        }).appendTo('#festival');
+        let content = ['오늘은 수요일', '문서객체생성수업', '조건문과 제어문'];
+        for (let i = 0; i < content.length; i++) {
+            $('<p></p>').html(content[i]).appendTo('#festival')
+        }
+        $('<h1>여름축제</h1>').prependTo('#festival')
+        $('<h2>나는 어디에 추가될까?</h2>').insertAfter('#festival');
+        $('<h2>나는 외톨이</h2>').insertBefore('body');
+    });
+</script>
+
+<body>
+    <h1>
+        문서객체생성
+    </h1>
+    <div id="festival"></div>
+</body>
+
+</html>

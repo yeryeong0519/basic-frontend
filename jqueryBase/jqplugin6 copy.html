@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script></script>
+    <style>
+        img{
+            position: relative;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 50%;
+            position: relative;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('img').click(function(){
+                $(this).animate({
+                    left : 1500
+                }, 3000);
+            });
+            $('div').click(function(){
+                $(this).animate({
+                    top : 500
+                }, 2000, 'easeOutBounce', function(){
+                    $(this).delay(2000).animate({
+                        top : 0
+                    }, 10)
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+    <button>stop()</button>
+    <button>stop(true)</button>
+    <button>stop(false, true)</button>
+    <button>stop(true, true)</button>
+</body>
+</html>
