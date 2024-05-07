@@ -23,6 +23,12 @@
                 $(this).removeClass('ui-state-hover')
             });
             $('#radiobox').buttonset();
+            $('#radiobox>input').change(function(){
+                $('#output').addClass('ui-state-' + $(this).val());
+            });
+            function reset(){
+                $('#output').attr('class', 'ui-widget-content ui-corner-all')
+            }
             
         });
     </script>
