@@ -26,6 +26,9 @@
             $('#radiobox>input').change(function(){
                 $('#output').addClass('ui-state-' + $(this).val());
             });
+            $('button').click(function(){
+                reset();
+            })
             function reset(){
                 $('#output').attr('class', 'ui-widget-content ui-corner-all')
             }
