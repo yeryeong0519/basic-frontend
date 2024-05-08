@@ -27,7 +27,7 @@
             z-index: 10;
         }
 
-        #top>img {
+        #top>.text-top {
             position: absolute;
             left: 200px;
             top: 10px;
@@ -37,6 +37,13 @@
             position: absolute;
             left: 140px;
             top: 30px;
+        }
+        #top > .random_top{
+            position: absolute;
+            left: 580px;
+            top: 20px;
+            cursor: pointer;
+            
         }
 
         #container {
@@ -85,61 +92,46 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
         $(function () {
-            let headclix = 0, eyesclix = 0, noseclix = 0, mouthclix = 0;
-            $('.head').click(function () {
-                headclix++;
-                if (headclix < 10) {
-                    $(this).animate({
-                        left: -(headclix * 367)
+            let clix = [0, 0, 0, 0];
+            lightning();
+            //랜덤하게
+            $('.random_top').click(function(){
+                $('.face').click(function(){
+                    clix[index] = Math.round(Math.random()*9);
+                    monsterMove(index, this)
+                });
+
+            })
+
+
+            //몬스터 이미지 슬라이드 구현 함수
+            function monsterMove(index, obj){
+                clix[index]++;
+                if(clix[index] < 10){
+                    $(obj).animate({
+                        left:-(clix[index]*367)
                     }, 'slow')
-                } else {
+                }else {
                     $(this).animate({
                         left: 0
                     }, 'slow');
                     headclix = 0;
                 }
-            });
-            //눈 이미지 슬라이드
-            $('eyes').click(function(){
-                eyesclix++;
-                if (eyesclix < 10) {
-                    $(this).animate({
-                        left: -(eyesclix * 367)
-                    }, 'slow')
-                } else {
-                    $(this).animate({
-                        left: 0
-                    }, 'slow');
-                    eyesclix = 0;
-                }
-            });
-            $('nose').click(function(){
-                noseclix++;
-                if (noseclix < 10) {
-                    $(this).animate({
-                        left: -(noseclix * 367)
-                    }, 'slow')
-                } else {
-                    $(this).animate({
-                        left: 0
-                    }, 'slow');
-                    noseclix = 0;
-                }
-            });
-            //입 이미지 슬라이드
-            $('mouth').click(function(){
-                mouthclix++;
-                if (mouthclix < 10) {
-                    $(this).animate({
-                        left: -(mouthclix * 367)
-                    }, 'slow')
-                } else {
-                    $(this).animate({
-                        left: 0
-                    }, 'slow');
-                    mouthclix = 0;
-                }
-            });
+            }
+            // $('.head').click(function () {
+            //     headclix++;
+            //     if (headclix < 10) {
+            //         $(this).animate({
+            //             left: -(headclix * 367)
+            //         }, 'slow')
+            //     } else {
+            //         $(this).animate({
+            //             left: 0
+            //         }, 'slow');
+            //         headclix = 0;
+            //     }
+            // });
+            
             //번개구현
             setInterval(function(){
                 $('lighting1').fadeIn(250).fadeOut(250);
@@ -150,6 +142,12 @@
             setInterval(function(){
                 $('lighting3').fadeIn(250).fadeOut(250);
             },7000);
+            function lightning(){
+                $('.lighting1').fadeIn(25).fadeOut(250);
+                setTimeout(function(){
+                    lightning();
+                },4000)
+            }
         });
     </script>
 </head>
@@ -159,8 +157,9 @@
     <img class="lightning lightning2" src="../images/lightning-01.jpg" alt="lightning-02">
     <img class="lightning lightning3" src="../images/lightning-01.jpg" alt="lightning-03">
     <header id="top">
-        <img src="images/Monster_Mashup.png" alt="Monster_Mashup">
+        <img class = "text-top" src="images/Monster_Mashup.png" alt="Monster_Mashup">
         <p>Make your own monster face by clicking on the picture.</p>
+        <img class = "random_top" src = "images/monster.png" alt="monster" title = "클릭하면 랜덤">
     </header>
     <div id="container">
         <div class="frame">

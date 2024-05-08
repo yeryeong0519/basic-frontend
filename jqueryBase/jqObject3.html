@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    
+</style>
+
+<script>
+    function area(){
+        $('button').click(function(){
+            $('koala').wrap('<div></div>');
+        });
+        let nums = [10, 20, 30];
+        nums.push(40)
+        // console.log(nums);
+        let nums2 = [10, 20, 30]
+        let nums3 = Array.from(nums2);
+        nums3.push(40);
+        // console.log(nums2);
+        let nums4 = [10, 20, 30];
+        let nums5 = nums4.concat(40);
+        console.log(nums5)
+
+
+    }
+</script>
+
+<body>
+    <button>영역 만들기</button>
+    <img class = "Koala" src="../images/Koala.jpg" alt="">
+</body>
+
+</html>

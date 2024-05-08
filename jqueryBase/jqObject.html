@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    
+</style>
+
+<script>
+    $(function () {
+        let product = {
+            name : '냉장고',
+            price : 1950000,
+            type : '양문형'
+        };
+        let result = prodInfo.bin(product)
+        function prodInfo(){
+            alert(product, name);
+        }
+        let pcode = {
+            code : 'ss5123',
+            number : 123
+        }
+        $.extend(product, pcode);
+        console.log(product);
+        alert(product.code)
+    });
+</script>
+
+<body>
+    <h1>김철수</h1>
+    <h1>홍길동</h1>
+</body>
+
+</html>
+
+<!--
+$(생성될 객체).appendTo(장소);
+$(생성될 객체).prependTo(장소);
+$(영역).append(생성될객체);
+$(영역).prepend(생성될객체);
+-->
