@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"product.xml",
+                success : function(data){
+                    $(data).find('product').each(function(){
+                        let name = $(this).find('name').html();
+                        let price = $(this).find('price').html();
+                        $('<h2></h2>').html(name + ' " ' + price).appendTo('#list');
+                    })
+                },
+                error : function(){
+                    alert("통신에러")
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>편의점 물품리스트</h1>
+        <div id="list"></div>
+    
+</body>
+</html>
